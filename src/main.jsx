@@ -9,5 +9,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </React.StrictMode>
 );
 
-const p = <p>hi there</p>;
+const text = "hi there";
+const tabIndex = 2;
+
+const p = (
+  <div>
+    <p className="main" tabIndex={tabIndex}>
+      <span className="test">{text}</span>
+    </p>
+    <p className="main" tabIndex={tabIndex}>
+      <span className="test">{tabIndex}</span>
+    </p>
+  </div>
+);
 console.log(p);
