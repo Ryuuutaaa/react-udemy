@@ -23,3 +23,5 @@ const p = (
   </div>
 );
 console.log(p);
+
+ReactDOM.createRoot(document.getElementById("root ")).render(p);
