@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import TestFunction from "./Test";
+
 // import App from "./App.jsx";
 // import "./index.css";
 
@@ -8,16 +10,6 @@ import ReactDOM from "react-dom/client";
 //     <App />
 //   </React.StrictMode>
 // );
-
-const TestFunction = function (props) {
-  return (
-    <div>
-      <p>
-        Welcome to {props.course} source, and {props.examp}{" "}
-      </p>
-    </div>
-  );
-};
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <TestFunction course="nextjs" examp="crud" />
