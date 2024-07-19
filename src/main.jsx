@@ -9,13 +9,16 @@ import ReactDOM from "react-dom/client";
 //   </React.StrictMode>
 // );
 
-const TestFunction = function () {
-  const course = "react";
+const TestFunction = function (props) {
   return (
     <div>
-      <p>Welcome to {course} source </p>
+      <p>
+        Welcome to {props.course} source, and {props.examp}{" "}
+      </p>
     </div>
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(TestFunction());
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <TestFunction course="nextjs" examp="crud" />
+);
