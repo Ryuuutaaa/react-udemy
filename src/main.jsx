@@ -1,27 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
+// import App from "./App.jsx";
+// import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
 
-const text = "hi there";
-const tabIndex = 2;
+const TestFunction = function () {
+  const course = "react";
+  return (
+    <div>
+      <p>Welcome to {course} source </p>
+    </div>
+  );
+};
 
-const p = (
-  <div>
-    <p className="main" tabIndex={tabIndex}>
-      <span className="test">{text}</span>
-    </p>
-    <p className="main" tabIndex={tabIndex}>
-      <span className="test">{tabIndex}</span>
-    </p>
-  </div>
-);
-console.log(p);
-
-ReactDOM.createRoot(document.getElementById("root ")).render(p);
+ReactDOM.createRoot(document.getElementById("root")).render(TestFunction());
