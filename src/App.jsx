@@ -1,11 +1,11 @@
-import SubComponnet from "./SubComponnet";
+import SubComponnet from "./components/SubComponnet";
 
 function App() {
   return (
     <>
       <div>
         <p>This root componnets</p>
-        <SubComponnet />
+        <SubComponnet>This is children components</SubComponnet>
       </div>
     </>
   );
