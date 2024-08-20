@@ -7,9 +7,7 @@ function App() {
       <div>
         <p>This root componnets</p>
         <SubComponnet>This is children components</SubComponnet>
-        <ClassBasedComponents test="this class props components">
-          THis classes children components
-        </ClassBasedComponents>
+        <ClassBasedComponents />
       </div>
     </>
   );
