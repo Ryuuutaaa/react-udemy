@@ -2,7 +2,13 @@ import React from "react";
 
 class ClassBasedComponents extends React.Component {
   state = { courese: "react" };
+
+  componentDidMount() {
+    console.log("after render");
+  }
+
   render() {
+    console.log("before render");
     return (
       <>
         <div>
