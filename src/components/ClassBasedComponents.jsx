@@ -14,6 +14,9 @@ class ClassBasedComponents extends React.Component {
     });
   }
 
+  // call before close you component
+  componentWillUnmount() {}
+
   render() {
     console.log("before render");
     return (
