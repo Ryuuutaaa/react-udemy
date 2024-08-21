@@ -1,10 +1,17 @@
 import React from "react";
 
 class ClassBasedComponents extends React.Component {
-  state = { courese: "react" };
+  state = { courese: "react", counter: 1 };
 
   componentDidMount() {
     console.log("after render");
+    // this.setState({ courese: "vue", counter: this.state.counter + 1 });
+    this.setState((oldState) => {
+      return {
+        courese: "vue",
+        counter: oldState.counter + 1,
+      };
+    });
   }
 
   render() {
