@@ -3,14 +3,14 @@ import React from "react";
 const FunctionComponents = () => {
   const [data, setData] = React.useState("React");
 
-  const handleClick = () => {
-    console.log("this is handle click");
-    setData("vue");
+  const handleClick = (course, price) => {
+    console.log(price);
+    setData(course);
   };
   return (
     <div>
       <p>This function componetns</p>
-      <button type="button" onClick={handleClick}>
+      <button type="button" onClick={() => handleClick("angular", 200)}>
         Click here
       </button>
 
