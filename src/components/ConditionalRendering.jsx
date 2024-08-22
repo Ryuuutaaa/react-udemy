@@ -1,15 +1,31 @@
 import { useState } from "react";
 
 const ConditionalRendering = () => {
-  const [course, setCourse] = useState("vue");
+  const [isLoggedIn, setIsLoggendIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggendIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggendIn(false);
+  };
+
+  let text = null;
+
+  if (isLoggedIn) {
+    text = "welcome Rafiii";
+  } else {
+    text = "click to login button";
+  }
   return (
     <div>
-      <p>Conditional Rendering </p>
-      {course === "react" ? (
-        <p>Thsi course Reac</p>
-      ) : course === "vue" ? (
-        <p>This course Vue</p>
-      ) : null}
+      <p>{text}</p>
+      {isLoggedIn === false ? (
+        <button onClick={handleLogin}>login</button>
+      ) : (
+        <button onClick={handleLogout}>Logout</button>
+      )}
     </div>
   );
 };
