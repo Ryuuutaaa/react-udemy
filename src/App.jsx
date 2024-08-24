@@ -1,10 +1,11 @@
 import CounterApp from "./components/CounterApp";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
       <div>
-        <CounterApp />
+        <Form />
       </div>
     </>
   );
