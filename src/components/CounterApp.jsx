@@ -12,7 +12,7 @@ const CounterApp = () => {
   };
   return (
     <div>
-      {counter > 0 ? <button>-</button> : null}
+      {counter > 0 ? <button onClick={handleReduceCounter}>-</button> : null}
       <span>{counter}</span>
       <button onClick={handlePlusCounter}>+</button>
     </div>
