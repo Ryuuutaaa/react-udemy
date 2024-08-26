@@ -6,6 +6,8 @@ const Form = () => {
   const [country, setCountry] = useState("");
   const [aggrement, setAggrement] = useState("");
 
+  const [gender, setGenter] = useState("");
+
   const hadnleChange = () => {
     if (event.target.name === "course") {
       setCourse(event.target.value);
@@ -15,6 +17,8 @@ const Form = () => {
       setCountry(event.target.value);
     } else if (event.target.name === "aggrement") {
       setAggrement(event.target.checked);
+    } else if (event.target.name === "gender") {
+      setGenter(event.target.value);
     }
   };
 
@@ -22,6 +26,7 @@ const Form = () => {
   console.log(desc);
   console.log(country);
   console.log(aggrement);
+  console.log(gender);
   return (
     <div>
       <form action="">
@@ -45,6 +50,28 @@ const Form = () => {
           id=""
           checked={aggrement}
           onChange={hadnleChange}
+        />
+        <br />
+        <input
+          type="radio"
+          name="gender"
+          onChange={hadnleChange}
+          id=""
+          value="male"
+        />
+        <input
+          type="radio"
+          name="gender"
+          onChange={hadnleChange}
+          id=""
+          value="female"
+        />
+        <input
+          type="radio"
+          name="gender"
+          onChange={hadnleChange}
+          id=""
+          value="other"
         />
       </form>
     </div>
