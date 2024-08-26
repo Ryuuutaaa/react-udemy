@@ -4,6 +4,7 @@ const Form = () => {
   const [course, setCourse] = useState("");
   const [desc, setDesc] = useState("");
   const [country, setCountry] = useState("");
+  const [aggrement, setAggrement] = useState("");
 
   const hadnleChange = () => {
     if (event.target.name === "course") {
@@ -12,12 +13,15 @@ const Form = () => {
       setDesc(event.target.value);
     } else if (event.target.name === "country") {
       setCountry(event.target.value);
+    } else if (event.target.name === "aggrement") {
+      setAggrement(event.target.checked);
     }
   };
 
   console.log(course);
   console.log(desc);
   console.log(country);
+  console.log(aggrement);
   return (
     <div>
       <form action="">
@@ -34,6 +38,14 @@ const Form = () => {
           <option value="Canada">Canada</option>
           <option value="UK">UK</option>
         </select>
+        <br />
+        <input
+          type="checkbox"
+          name="aggrement"
+          id=""
+          checked={aggrement}
+          onChange={hadnleChange}
+        />
       </form>
     </div>
   );
