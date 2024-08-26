@@ -1,10 +1,10 @@
-import RegistrasiForm from "./components/RegistrasiForm";
+import ClickCounter from "./components/ClickCounter";
 
 function App() {
   return (
     <>
       <div>
-        <RegistrasiForm />
+        <ClickCounter />
       </div>
     </>
   );
