@@ -22,14 +22,18 @@ const Form = () => {
     }
   };
 
-  console.log(course);
-  console.log(desc);
-  console.log(country);
-  console.log(aggrement);
-  console.log(gender);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(course);
+    console.log(desc);
+    console.log(country);
+    console.log(aggrement);
+    console.log(gender);
+  };
+
   return (
     <div>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <input name="course" value={course} onChange={hadnleChange} />
         <br />
         <textarea
@@ -73,6 +77,8 @@ const Form = () => {
           id=""
           value="other"
         />
+        <br />
+        <input type="submit" value="save" />
       </form>
     </div>
   );
