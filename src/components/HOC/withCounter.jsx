@@ -1,6 +1,6 @@
 import { Component, useState } from "react";
 
-const withCounter = () => {
+const withCounter = (Component) => {
   const newComponent = () => {
     const [counter, setCounter] = useState(0);
 
