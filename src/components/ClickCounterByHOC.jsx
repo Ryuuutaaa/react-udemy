@@ -1,6 +1,6 @@
 import withCounter from "./HOC/withCounter";
 
-const ClickCounter = ({ counter, handleIncrement }) => {
+const ClickCounterByHOC = ({ counter, handleIncrement }) => {
   return (
     <div>
       <button onClick={handleIncrement}>clicked {counter} times</button>
@@ -8,4 +8,4 @@ const ClickCounter = ({ counter, handleIncrement }) => {
   );
 };
 
-export default withCounter(ClickCounter);
+export default withCounter(ClickCounterByHOC);
