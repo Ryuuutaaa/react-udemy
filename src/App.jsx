@@ -1,5 +1,6 @@
 import ClickCounterByRP from "./components/ClickCounterByRP";
 import Counter from "./components/Counter";
+import HoverCounterByRP from "./components/HoverCounterByRP";
 
 function App() {
   return (
@@ -8,6 +9,15 @@ function App() {
         <Counter
           render={(counter, handleIncrement) => (
             <ClickCounterByRP
+              counter={counter}
+              handleIncrement={handleIncrement}
+            />
+          )}
+        />
+
+        <Counter
+          render={(counter, handleIncrement) => (
+            <HoverCounterByRP
               counter={counter}
               handleIncrement={handleIncrement}
             />
