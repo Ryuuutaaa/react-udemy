@@ -1,11 +1,17 @@
-import RenderProps from "./components/RenderProps";
+import ClickCounterByRP from "./components/ClickCounterByRP";
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <>
       <div>
-        <RenderProps
-          course={(isMyFavorit) => (isMyFavorit ? "react" : "laravel")}
+        <Counter
+          render={(counter, handleIncrement) => (
+            <ClickCounterByRP
+              counter={counter}
+              handleIncrement={handleIncrement}
+            />
+          )}
         />
       </div>
     </>
