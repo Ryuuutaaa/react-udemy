@@ -1,12 +1,12 @@
-import ClickCounter from "./components/ClickCounter";
-import HoverCounter from "./components/HoverCounter";
+import RenderProps from "./components/RenderProps";
 
 function App() {
   return (
     <>
       <div>
-        <ClickCounter />
-        <HoverCounter />
+        <RenderProps
+          course={(isMyFavorit) => (isMyFavorit ? "react" : "laravel")}
+        />
       </div>
     </>
   );
