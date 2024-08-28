@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-const Counter = ({ render }) => {
+const Counter = ({ children }) => {
   const [counter, setCounter] = useState(0);
 
   const handleIncrement = () => {
     setCounter((oldCounter) => oldCounter + 1);
   };
-  return render(counter, handleIncrement);
+  return children(counter, handleIncrement);
 };
 
 export default Counter;

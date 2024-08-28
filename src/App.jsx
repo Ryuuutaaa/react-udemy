@@ -6,23 +6,23 @@ function App() {
   return (
     <>
       <div>
-        <Counter
-          render={(counter, handleIncrement) => (
+        <Counter>
+          {(counter, handleIncrement) => (
             <ClickCounterByRP
               counter={counter}
               handleIncrement={handleIncrement}
             />
           )}
-        />
+        </Counter>
 
-        <Counter
-          render={(counter, handleIncrement) => (
+        <Counter>
+          {(counter, handleIncrement) => (
             <HoverCounterByRP
               counter={counter}
               handleIncrement={handleIncrement}
             />
           )}
-        />
+        </Counter>
       </div>
     </>
   );
