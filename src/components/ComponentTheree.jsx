@@ -10,3 +10,19 @@ const ComponentTheree = ({ course }) => {
 };
 
 export default ComponentTheree;
+
+{
+  /* 
+        <Provider>
+            <App />
+        </Provider>
+    */
+}
+
+{
+  /*
+        <Consumer>
+            <ComponentTheree />
+        </Consumer>
+    */
+}
