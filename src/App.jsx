@@ -1,10 +1,13 @@
 import ComponentOne from "./components/ComponentOne";
+import courseContext from "./components/context/courseContext";
 
 function App() {
   return (
     <>
       <div>
-        <ComponentOne course="react" />
+        <courseContext.Provider value={{ course: "react" }}>
+          <ComponentOne course="react" />
+        </courseContext.Provider>
       </div>
     </>
   );
