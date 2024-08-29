@@ -6,7 +6,7 @@ function App() {
     <>
       <div>
         <courseContext.Provider value={{ course: "react" }}>
-          <ComponentOne course="react" />
+          <ComponentOne />
         </courseContext.Provider>
       </div>
     </>

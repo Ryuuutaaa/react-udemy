@@ -1,11 +1,10 @@
-import React from "react";
 import ComponentTwo from "./ComponentTwo";
 
-const ComponentOne = ({ course }) => {
+const ComponentOne = () => {
   return (
     <div>
       <h1>This Component One</h1>
-      <ComponentTwo course={course} />
+      <ComponentTwo />
     </div>
   );
 };

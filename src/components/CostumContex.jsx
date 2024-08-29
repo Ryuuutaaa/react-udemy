@@ -8,7 +8,7 @@ class Context {
     return children;
   };
 
-  Consumer = ({ children }) => children.value;
+  Consumer = ({ children }) => children(this.value);
 }
 
 function createContext(value = null) {

@@ -1,28 +1,14 @@
-import React from "react";
+import courseContext from "./context/courseContext";
 
-const ComponentTheree = ({ course }) => {
+const ComponentTheree = () => {
   return (
     <div>
       <h1>This component There</h1>
-      course : {course}
+      <courseContext.Consumer>
+        {({ course }) => <p>Course : {course}</p>}
+      </courseContext.Consumer>
     </div>
   );
 };
 
 export default ComponentTheree;
-
-{
-  /* 
-        <Provider>
-            <App />
-        </Provider>
-    */
-}
-
-{
-  /*
-        <Consumer>
-            <ComponentTheree />
-        </Consumer>
-    */
-}
