@@ -30,4 +30,6 @@ class ClassBasedComponents extends React.Component {
   }
 }
 
+
+
 export default ClassBasedComponents;

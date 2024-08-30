@@ -1,4 +1,4 @@
-import createContext from "../CostumContex";
+import { createContext } from "react";
 
 const courseContext = createContext();
 
