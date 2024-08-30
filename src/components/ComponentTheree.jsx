@@ -1,12 +1,12 @@
 import courseContext from "./context/courseContext";
+import { useContext } from "react";
 
 const ComponentTheree = () => {
+  const { course } = useContext(courseContext);
   return (
     <div>
       <h1>This component There</h1>
-      <courseContext.Consumer>
-        {({ course }) => <p>Course : {course}</p>}
-      </courseContext.Consumer>
+      <p>course : {course}</p>
     </div>
   );
 };
