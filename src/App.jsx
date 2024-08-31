@@ -1,13 +1,13 @@
-import ComponentOne from "./components/ComponentOne";
-import courseContext from "./components/context/courseContext";
+import UseEffectCom from "./components/UseEffect";
 
 function App() {
   return (
     <>
       <div>
-        <courseContext.Provider value={{ course: "react" }}>
+        {/* <courseContext.Provider value={{ course: "react" }}>
           <ComponentOne />
-        </courseContext.Provider>
+        </courseContext.Provider> */}
+        <UseEffectCom />
       </div>
     </>
   );
