@@ -10,6 +10,12 @@ const UseEffectCom = () => {
   useEffect(() => {
     console.log("call this function in every render");
   });
+
+  useEffect(() => {
+    console.log("call this function initial render");
+  }, []);
+
+  
   return (
     <>
       <p>Use Effect example</p>
