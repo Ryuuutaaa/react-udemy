@@ -1,4 +1,4 @@
-import UseEffectCom from "./components/UseEffect";
+import Timer from "./components/Timer";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
         {/* <courseContext.Provider value={{ course: "react" }}>
           <ComponentOne />
         </courseContext.Provider> */}
-        <UseEffectCom />
+        <Timer />
       </div>
     </>
   );
