@@ -7,6 +7,8 @@ const Timer = () => {
     setInterval(() => {
       setTimer(new Date());
     }, 1000);
+
+    return () => {};
   }, []);
 
   return (
