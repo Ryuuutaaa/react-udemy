@@ -15,7 +15,10 @@ const UseEffectCom = () => {
     console.log("call this function initial render");
   }, []);
 
-  
+  useEffect(() => {
+    console.log("call this function when dependency changes");
+  }, [counter]);
+
   return (
     <>
       <p>Use Effect example</p>
