@@ -1,4 +1,4 @@
-import Posts from "./components/Posts";
+import UseCallback from "./components/UseCallback";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         </courseContext.Provider> */}
         {/* <button onClick={() => setToggle(!toggle)}>Click Toggle</button>
         {toggle ? <CounterApp /> : <Timer />} */}
-        <Posts />
+        <UseCallback />
       </div>
     </>
   );
