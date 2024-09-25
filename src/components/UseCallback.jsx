@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Title from "./Title";
+import ShowCounter from "./ShowCounter";
 
 const UseCallback = () => {
   const [counter1, setCounter1] = useState(0);
@@ -16,6 +17,8 @@ const UseCallback = () => {
   return (
     <div>
       <Title />
+      <ShowCounter counter={counter1} title="Counter 1" />
+      
     </div>
   );
 };
