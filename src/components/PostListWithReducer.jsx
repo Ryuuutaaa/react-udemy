@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer } from "react";
 
 const PostListWithReducer = () => {
   const initialState = {
@@ -12,7 +12,7 @@ const PostListWithReducer = () => {
     switch (action.type) {
       case "SUCCESS":
         return {
-          loading: true,
+          loading: false, // loading harus false setelah data berhasil diambil
           posts: action.data,
           error: "",
         };
@@ -20,7 +20,7 @@ const PostListWithReducer = () => {
       case "ERROR":
         return {
           loading: false,
-          potst: [],
+          posts: [], // typo "potst" diubah menjadi "posts"
           error: action.message,
         };
 
@@ -29,20 +29,17 @@ const PostListWithReducer = () => {
     }
   };
 
-  const [state, dispath] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState); // typo "dispath" diperbaiki menjadi "dispatch"
 
   useEffect(() => {
     async function fetchPosts() {
       try {
-        setLoading(true);
         const response = await axios.get(
           "https://jsonplaceholder.typicode.com/posts"
         );
-        setPosts(response.data);
-        setLoading(false);
+        dispatch({ type: "SUCCESS", data: response.data });
       } catch (error) {
-        setError(error.message);
-        setLoading(false);
+        dispatch({ type: "ERROR", message: error.message });
       }
     }
     fetchPosts();
@@ -51,12 +48,12 @@ const PostListWithReducer = () => {
   return (
     <div>
       <h2>Posts List</h2>
-      {loading ? (
+      {state.loading ? (
         <h3>Loading....</h3>
-      ) : error ? (
-        <h3>{error}</h3>
+      ) : state.error ? (
+        <h3>{state.error}</h3>
       ) : (
-        posts.map((post) => (
+        state.posts.map((post) => (
           <div key={post.id}>
             <h4>{post.title}</h4>
             <p>{post.body}</p>
