@@ -22,17 +22,24 @@ const PostListWithoutReducer = () => {
     }
     fetchPosts();
   }, []);
+
   return (
     <div>
       <h2>Posts List</h2>
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h4>{post.title}</h4>
-          <p>{post.body}</p>
-          <br />
-          <hr />
-        </div>
-      ))}
+      {loading ? (
+        <h3>Loading....</h3>
+      ) : error ? (
+        <h3>{error}</h3>
+      ) : (
+        posts.map((post) => (
+          <div key={post.id}>
+            <h4>{post.title}</h4>
+            <p>{post.body}</p>
+            <br />
+            <hr />
+          </div>
+        ))
+      )}
     </div>
   );
 };
