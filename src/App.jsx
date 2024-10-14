@@ -1,6 +1,8 @@
 // import UseCallback from "./components/UseCallback";
 
-import UserReff from "./components/UserReff";
+import UserReducer from "./components/UserReducer";
+
+// import UserReff from "./components/UserReff";
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
         {/* <button onClick={() => setToggle(!toggle)}>Click Toggle</button>
         {toggle ? <CounterApp /> : <Timer />} */}
         {/* <UseCallback /> */}
-        <UserReff />
+        {/* <UserReff /> */}
+        <UserReducer />
       </div>
     </>
   );
