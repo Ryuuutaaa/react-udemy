@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-  // return new state
+  // return new state reducer
   switch (action.type) {
     case "increment":
       return { counter: state.counter + action.value };
