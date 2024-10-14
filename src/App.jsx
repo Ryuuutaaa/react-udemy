@@ -1,5 +1,6 @@
 // import UseCallback from "./components/UseCallback";
 
+import PostListWithoutReducer from "./components/PostListWithoutReducer";
 import UserReducer from "./components/UserReducer";
 
 // import UserReff from "./components/UserReff";
@@ -15,7 +16,8 @@ function App() {
         {toggle ? <CounterApp /> : <Timer />} */}
         {/* <UseCallback /> */}
         {/* <UserReff /> */}
-        <UserReducer />
+        {/* <UserReducer /> */}
+        <PostListWithoutReducer />
       </div>
     </>
   );
