@@ -1,5 +1,6 @@
 // import UseCallback from "./components/UseCallback";
 
+import PostListWithCustomHooks from "./components/PostListWithCustomHooks";
 import PostListWithReducer from "./components/PostListWithReducer";
 
 // import UserReff from "./components/UserReff";
@@ -17,7 +18,8 @@ function App() {
         {/* <UserReff /> */}
         {/* <UserReducer /> */}
         {/* <PostListWithoutReducer /> */}
-        <PostListWithReducer /> 
+        {/* <PostListWithReducer />  */}
+        <PostListWithCustomHooks />
       </div>
     </>
   );
