@@ -2,14 +2,23 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const PostListWithoutReducer = () => {
+  const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchPosts() {
-      const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      setPosts(response.data);
+      try {
+        setLoading(true);
+        const response = await axios.get(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+        setPosts(response.data);
+        setLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setLoading(false);
+      }
     }
     fetchPosts();
   }, []);
