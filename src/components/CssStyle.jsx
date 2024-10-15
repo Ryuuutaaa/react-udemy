@@ -1,4 +1,5 @@
-// import "../assets/css/style.css";
+import classess from "../assets/css/test.module.css";
+console.log(classess);
 
 const CssStyle = () => {
   return (
@@ -10,8 +11,8 @@ const CssStyle = () => {
     //     This style inline css
     //   </p>
     // </div>
-    <div>
-      <p></p>
+    <div className={classess.container}>
+      <p className={classess.text}>This module css</p>
     </div>
   );
 };
