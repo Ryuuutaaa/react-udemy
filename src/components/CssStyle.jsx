@@ -2,7 +2,7 @@ import "../assets/css/style.css";
 
 const CssStyle = () => {
   return (
-    <div>
+    <div className="container">
       <p>Stylecss is here</p>
     </div>
   );
