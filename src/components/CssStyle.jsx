@@ -1,7 +1,13 @@
+import { useState } from "react";
 import classess from "../assets/css/test.module.css";
 console.log(classess);
 
 const CssStyle = () => {
+  const [color, setColors] = useState(false);
+
+  const handleClick = () => {
+    setColors(!color);
+  };
   return (
     // <div className="container">
     //   <p>Stylecss is here</p>
@@ -11,8 +17,9 @@ const CssStyle = () => {
     //     This style inline css
     //   </p>
     // </div>
-    <div className={classess.container}>
-      <p className={classess.text}>This module css</p>
+    <div className={color ? classess.container : classess.container1}>
+      <p className={color ? classess.text : classess.text1}>This module css</p>
+      <button onClick={handleClick}>Change Colors</button>
     </div>
   );
 };
