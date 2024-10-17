@@ -11,6 +11,7 @@ import NotFound from "./components/pages/NotFound";
 import PostList from "./components/pages/PostList";
 import PostsDetail from "./components/pages/PostsDetail";
 import HotPosts from "./components/pages/HotPosts";
+import ProductList from "./components/pages/ProductList";
 
 // import PostListWithCustomHooks from "./components/PostListWithCustomHooks";
 // import PostListWithReducer from "./components/PostListWithReducer";
@@ -41,6 +42,7 @@ function App() {
           <Route path="/posts" element={<PostList />} />
           <Route path="/posts/:postId" element={<PostsDetail />} />
           <Route path="/posts/hot" element={<HotPosts />} />
+          <Route path="/products" element={<ProductList />} />
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
