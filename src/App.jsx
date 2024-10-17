@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
+import Navbar from "./components/Navbar";
 
 // import PostListWithCustomHooks from "./components/PostListWithCustomHooks";
 // import PostListWithReducer from "./components/PostListWithReducer";
@@ -27,6 +28,7 @@ function App() {
         {/* <PostListWithReducer />  */}
         {/* <PostListWithCustomHooks /> */}
         {/* <CssStyle /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

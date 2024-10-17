@@ -21,7 +21,7 @@ const UseEffectCom = () => {
 
   return (
     <>
-      <p>Use Effect example</p>
+      <p>Use Effect example</p>k
       <button onClick={handleCounter}>Clicked {counter} times</button>
     </>
   );
