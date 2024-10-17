@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import OrderConfirmation from "./components/pages/OrderConfirmation";
 import NotFound from "./components/pages/NotFound";
 import PostList from "./components/pages/PostList";
+import PostsDetail from "./components/pages/PostsDetail";
 
 // import PostListWithCustomHooks from "./components/PostListWithCustomHooks";
 // import PostListWithReducer from "./components/PostListWithReducer";
@@ -37,6 +38,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/posts" element={<PostList />} />
+          <Route path="/posts/1" element={<PostsDetail />} />
+          <Route path="/posts/2" element={<PostsDetail />} />
+          <Route path="/posts/3" element={<PostsDetail />} />
           <Route path="/order-confirmation" element={<OrderConfirmation />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
