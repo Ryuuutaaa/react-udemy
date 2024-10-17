@@ -6,6 +6,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Navbar from "./components/Navbar";
+import OrderConfirmation from "./components/pages/OrderConfirmation";
 
 // import PostListWithCustomHooks from "./components/PostListWithCustomHooks";
 // import PostListWithReducer from "./components/PostListWithReducer";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/order-confirmation" element={<OrderConfirmation />} />
         </Routes>
       </div>
     </>
