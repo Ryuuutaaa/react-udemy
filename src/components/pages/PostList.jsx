@@ -1,4 +1,9 @@
+import { useSearchParams } from "react-router-dom";
+
+
+
 const PostList = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   return (
     <div>
       <h1>Post List</h1>
