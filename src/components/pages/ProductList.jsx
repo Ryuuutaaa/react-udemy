@@ -7,6 +7,9 @@ const ProductList = () => {
       <nav>
         <NavLink to="featured">Featured</NavLink>
         <NavLink to="new">New</NavLink>
+
+        {/* <NavLink to="/featured">Featured</NavLink>
+        <NavLink to="/new">New</NavLink> */}
       </nav>
 
       <Outlet />
