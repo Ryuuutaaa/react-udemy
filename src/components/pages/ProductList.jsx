@@ -1,13 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const ProductList = () => {
   return (
     <div>
       <h2>of list product</h2>
       <nav>
-        <NavLink>Featured</NavLink>
-        <NavLink>New</NavLink>
+        <NavLink to="featured">Featured</NavLink>
+        <NavLink to="new">New</NavLink>
       </nav>
+
+      <Outlet />
     </div>
   );
 };

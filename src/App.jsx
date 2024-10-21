@@ -12,6 +12,8 @@ import PostList from "./components/pages/PostList";
 import PostsDetail from "./components/pages/PostsDetail";
 import HotPosts from "./components/pages/HotPosts";
 import ProductList from "./components/pages/ProductList";
+import FeaturedProducts from "./components/pages/FeaturedProducts";
+import NewProducts from "./components/pages/NewProducts";
 
 // import PostListWithCustomHooks from "./components/PostListWithCustomHooks";
 // import PostListWithReducer from "./components/PostListWithReducer";
@@ -37,13 +39,16 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/posts" element={<PostList />} />
-          <Route path="/posts/:postId" element={<PostsDetail />} />
-          <Route path="/posts/hot" element={<HotPosts />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/order-confirmation" element={<OrderConfirmation />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="posts" element={<PostList />} />
+          <Route path="posts/:postId" element={<PostsDetail />} />
+          <Route path="posts/hot" element={<HotPosts />} />
+          <Route path="products" element={<ProductList />}>
+            <Route path="featured" element={<FeaturedProducts />} />
+            <Route path="new" element={<NewProducts />} />
+          </Route>
+          <Route path="order-confirmation" element={<OrderConfirmation />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
